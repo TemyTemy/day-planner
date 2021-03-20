@@ -27,47 +27,6 @@ A simple calendar application that allows a user to save events for each hour of
 
 **Image 2**
 
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot2.PNG)
-
-
-
-**Image 3**
-
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot3.PNG)
-
-
-
-**Image 4**
-
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot4.PNG)
-
-
-
-**Image 5**
-
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot5.PNG)
-
-
-
-**Image 6**
-
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot6.PNG)
-
-
-
-**Image 7**
-
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot7.PNG)
-
-
-**Image 8**
-
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot8.PNG)
-
-
-**Image 9**
-
-![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot9.PNG)
 
 
 
