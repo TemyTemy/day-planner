@@ -19,7 +19,7 @@ A simple calendar application that allows a user to save events for each hour of
 
 **Image 1**  
 
-  ![alt text](https://github.com/TemyTemy/code-quiz/blob/main/assets/screenshots/screenshot1.PNG)
+  ![alt text](https://github.com/TemyTemy/day-planner/blob/main/Assets/screenshot1.PNG)
 
 
 
