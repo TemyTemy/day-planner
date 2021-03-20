@@ -78,5 +78,5 @@ A simple calendar application that allows a user to save events for each hour of
 
 ## Links on Github
 
-- The source code repository is available at this link: https://github.com/TemyTemy/code-quiz
+- The source code repository is available at this link: https://github.com/TemyTemy/day-planner
 - The home page to the website is available at this link: https://temytemy.github.io/day-planner/
