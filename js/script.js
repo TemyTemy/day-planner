@@ -1,6 +1,16 @@
+var timeDisplayEl = $('#displayMoment');
+
+// handle displaying the time
+// function displayTime() {
+
+var displayedTime = moment();
+var rightNowText = displayedTime.format('MMM DD, YYYY  hh:mm:ss a');
+timeDisplayEl.text(rightNowText);
+
 var LOCAL_STORAGE_KEY = "events";
-var EVENTS = {list: []};
+var EVENTS = {date: displayedTime.format("L"), list: []};
 var EMPTY_EVENTS = {
+   date: displayedTime.format("L"),
    list:[{
        time: "9:00 AM",
        event: ''
@@ -39,15 +49,6 @@ var EMPTY_EVENTS = {
    }
   ]
 };
-var timeDisplayEl = $('#displayMoment');
-
-// handle displaying the time
-// function displayTime() {
-
-  var displayedTime = moment();
-  var rightNowText = displayedTime.format('MMM DD, YYYY  hh:mm:ss a');
-  timeDisplayEl.text(rightNowText);
-
 
   function addRow(time, evt) {
     var text = "<div class='row'>"
@@ -81,8 +82,14 @@ var timeDisplayEl = $('#displayMoment');
 
 
   function readEventsFromLocalStorage() {
+    var currentDate = displayedTime.format("L");
     var eventText = localStorage.getItem(LOCAL_STORAGE_KEY);
-    EVENTS = eventText ? JSON.parse(eventText) : EMPTY_EVENTS;
+    if (!eventText) {
+      EVENTS = EMPTY_EVENTS;
+    } else {
+      storedEvents = JSON.parse(eventText);
+      EVENTS = storedEvents.date !== currentDate ? EMPTY_EVENTS : storedEvents;
+    }
   }
 
   function displayEvents() {
