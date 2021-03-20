@@ -1,8 +1,10 @@
-body {
+  body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
   }
+
+
   
   textarea {
     background: transparent;
@@ -85,6 +87,12 @@ body {
   .current {
     background-color: #dc3545;
    }
+
+   @media screen and (max-width: 350px) {
+    .row {
+      height: auto !important;
+    }
+  }
   
   .row {
     white-space: pre-wrap;

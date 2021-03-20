@@ -1,11 +1,13 @@
-var EVENTS = {
+var LOCAL_STORAGE_KEY = "events";
+var EVENTS = {list: []};
+var EMPTY_EVENTS = {
    list:[{
        time: "9:00 AM",
-       event: 'Event that already happened'
+       event: ''
    },
    {
        time: "10:00 AM",
-       'event': 'Meeting'
+       'event': ''
    },
    {
     time: "11:00 AM",
@@ -51,7 +53,7 @@ var timeDisplayEl = $('#displayMoment');
     var text = "<div class='row'>"
                   + "<div class='col-sm-1 time-block'>" + time + "</div>"
                   +  constructEventBlock(time, evt)
-                  + "<div class='col-sm-1 action-block'><span><i class='fa fa-lock'></i></span></div>"
+                  + "<div class='col-sm-1 action-block' data-time='" + time + "'><span><i class='fa fa-lock'></i></span></div>"
                 + "</div>";
     return text;           
   }
@@ -73,11 +75,14 @@ var timeDisplayEl = $('#displayMoment');
         colorClass = "";
     }
 
-    return "<div class='col-sm-10 event-block " + colorClass + "'><textarea>" + evt + "</textarea></div>"
+    return "<div class='col-sm-10 event-block " + colorClass + "'><textarea data-time='" + time + "'>" + evt + "</textarea></div>"
   }
 
+
+
   function readEventsFromLocalStorage() {
-      
+    var eventText = localStorage.getItem(LOCAL_STORAGE_KEY);
+    EVENTS = eventText ? JSON.parse(eventText) : EMPTY_EVENTS;
   }
 
   function displayEvents() {
@@ -87,6 +92,26 @@ var timeDisplayEl = $('#displayMoment');
           eventText += addRow(evt.time, evt.event);
       }
       $(".container").html(eventText);
+
+      $(".action-block").click((event) => {
+          var time = event.currentTarget.dataset.time;
+          updateEvent(time);
+      });
+  }
+
+  function updateEvent(timeText) {
+    var eventToUpdate = EVENTS.list.find((x) => x.time === timeText);
+    if (eventToUpdate) {
+        var textData = $("textarea[data-time='" + eventToUpdate.time + "'").val();
+        eventToUpdate.event = textData;
+        saveEvents();
+    }
+  }
+
+  function saveEvents() {
+      var eventText = JSON.stringify(EVENTS);
+      localStorage.setItem(LOCAL_STORAGE_KEY, eventText);
+      displayEvents();      
   }
 
   readEventsFromLocalStorage();
