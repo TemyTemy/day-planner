@@ -13,6 +13,7 @@ A simple calendar application that allows a user to save events for each hour of
 - Grey colour indicates past, Red indicates current hour and Green indicates in the future.
 - User can click into a timeblock to enter an event which can be saved with the save button.
 - User can refresh the the page to see saved events.
+- The application is responsive.
 
 
 ## Screenshots
@@ -27,10 +28,28 @@ A simple calendar application that allows a user to save events for each hour of
 
 **Image 2**
 
+ ![alt text](https://github.com/TemyTemy/day-planner/blob/main/Assets/screenshot2.PNG)
 
 
 
 
+**Image 3**
+
+ ![alt text](https://github.com/TemyTemy/day-planner/blob/main/Assets/screenshot3.PNG)
+
+
+
+
+**Image 4**
+
+ ![alt text](https://github.com/TemyTemy/day-planner/blob/main/Assets/screenshot4.PNG)
+
+
+
+
+**Image 5**
+
+ ![alt text](https://github.com/TemyTemy/day-planner/blob/main/Assets/screenshot5.PNG)
 
 
 
