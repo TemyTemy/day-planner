@@ -50,6 +50,12 @@ A simple calendar application that allows a user to save events for each hour of
 **Image 5**
 
  ![alt text](https://github.com/TemyTemy/day-planner/blob/main/Assets/screenshot5.PNG)
+ 
+ 
+ 
+ **Image 6**
+
+ ![alt text](https://github.com/TemyTemy/day-planner/blob/main/Assets/screenshot6.PNG)
 
 
 
